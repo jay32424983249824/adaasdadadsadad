@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "nyx-client",
+  "version": "${version}",
+  "name": "Nyx",
+  "description": "Nyx - eigener Utility-Client mit Modulen, Menue und HUD.",
+  "authors": ["Du"],
+  "license": "MIT",
+  "icon": "assets/nyx/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.vyro.client.VyroClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "~1.21.11",
+    "fabric-api": "*",
+    "java": ">=21"
+  }
+}
