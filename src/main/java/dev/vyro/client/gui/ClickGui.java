@@ -126,13 +126,13 @@ public class ClickGui extends Screen {
         private final Module module;
 
         ModuleButton(int x, int y, int w, int h, Module m) {
-            super(x, y, w, h, Text.literal(m.name), b -> m.toggle(), DEFAULT_NARRATION_SUPPLIER);
+            super(x, y, w, h, net.minecraft.text.Text.literal(m.name), b -> m.toggle(), DEFAULT_NARRATION_SUPPLIER);
             this.module = m;
-            this.setTooltip(Tooltip.of(Text.literal(m.description)));
+            this.setTooltip(Tooltip.of(net.minecraft.text.Text.literal(m.description)));
         }
 
         @Override
-        public void renderWidget(DrawContext context, int mouseX, int mouseY, float delta) {
+        public void drawIcon(DrawContext context, int mouseX, int mouseY, float delta) {
             boolean on = module.isEnabled();
             boolean hover = this.isHovered();
             int bg = on ? (hover ? BTN_ON_H : BTN_ON) : (hover ? BTN_OFF_H : BTN_OFF);

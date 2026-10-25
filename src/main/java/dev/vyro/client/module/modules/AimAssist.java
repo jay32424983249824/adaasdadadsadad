@@ -26,7 +26,7 @@ public class AimAssist extends Module {
         if (best == null) return;
 
         Vec3d from = mc.player.getEyePos();
-        Vec3d to = best.getPos().add(0, best.getHeight() * 0.6, 0);
+        Vec3d to = new Vec3d(best.getX(), best.getY() + best.getHeight() * 0.6, best.getZ());
         double dx = to.x - from.x;
         double dy = to.y - from.y;
         double dz = to.z - from.z;
